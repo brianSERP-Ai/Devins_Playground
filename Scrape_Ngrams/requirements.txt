@@ -1,0 +1,5 @@
+selenium
+pandas
+nltk
+bs4
+requests

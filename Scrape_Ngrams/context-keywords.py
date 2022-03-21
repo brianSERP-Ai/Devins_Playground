@@ -33,9 +33,9 @@ with open('PAGELEVELserp.csv', 'w',newline='' , encoding="utf-8") as csvfile:
 # Concatenate them
 
 import pandas as pd
-url = 'PAGE LEVEL serp.co content - about 1500 posts.csv'
+url = 'Inputtest.csv'
 df1 = pd.read_csv(url ,encoding="utf-8" ,engine="python",warn_bad_lines=True, error_bad_lines=False)
-df1 =df1
+df1 =df1.head(1)
 
 # Dataset is now stored in a Pandas Dataframe
 for ID, TERM in zip(df1['ID'],df1['TERM']):
@@ -156,7 +156,7 @@ for ID, TERM in zip(df1['ID'],df1['TERM']):
     #print(selected_items)
     
     
-        
-    with open('PAGELEVELserp.csv', 'a+', newline='', encoding="utf-8") as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow([ID, TERM, context])
+    #UNCOMMENT BELOW TO WRITE TO CSV
+    #with open('PAGELEVELserp.csv', 'a+', newline='', encoding="utf-8") as csvfile:
+        #csvwriter = csv.writer(csvfile)
+        #csvwriter.writerow([ID, TERM, context])
